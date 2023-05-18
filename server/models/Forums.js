@@ -17,6 +17,9 @@ module.exports = (sequelize, DataTypes) => {
 
     Forums.associate = (models) => {
         Forums.belongsTo(models.Users, { as: 'User',foreignKey: 'user_id' });
+        Forums.hasMany(models.ForumComments, {
+            onDelete: "cascade",
+        });
     }
 
     return Forums;
