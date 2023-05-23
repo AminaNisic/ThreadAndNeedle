@@ -4,12 +4,12 @@
     left: 0%;
     background-color: #032B1A;
     padding: 10px;
-    width: 1440px;
+    width: 100%;
 }
 
 .Homepage{
     position: absolute;
-    width: 101px;
+    width: 100%;
     height: 28px;
     left:389px;
     top: 28px;
@@ -74,9 +74,11 @@
 }
 
 .blogPost{
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 175px;
-    width: 1280px;
+    width: 100%;
     height: 1503px;
     left: 83px;   
     bottom:6px;
@@ -136,7 +138,7 @@
     left: 0%;
     background-color: #032B1A;
     padding: 10px;
-    width: 1440px;
+    width: 100%;
 }
 
 
