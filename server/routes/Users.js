@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 
 const {sign} = require('jsonwebtoken');
 
-router.post("/", async (req,res) => {
+router.post("/register", async (req,res) => {
    const { username, password, email } = req.body
    bcrypt.hash(password, 10).then((hash) => {
     Users.create({
@@ -28,11 +28,11 @@ router.post('/login', async (req,res) => {
     bcrypt.compare(password, user.password).then((match) => {
         if (!match) res.json({ error: "Wrong username and password combination" });
         //add username or email option
-        const accessToken = sign({username: user.username, id: user.id}, 
-        "bljonkajenajpametnijabljnkaikona");
+        /*const accessToken = sign({username: user.username, id: user.id}, 
+        "bljonkajenajpametnijabljnkaikona");*/
 
 
-         return res.json(accessToken);
+         return res.json("logged in!");
     })
 })
 

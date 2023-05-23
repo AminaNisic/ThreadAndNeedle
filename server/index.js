@@ -15,6 +15,15 @@ app.use("/auth", usersRouter);
 const postRouter = require("./routes/Posts");
 app.use("/posts", postRouter);
 
+const forumRouter = require("./routes/Forums");
+app.use("/forums", forumRouter);
+
+const postCommentRouter = require("./routes/PostComments");
+app.use("/postcomments", postCommentRouter);
+
+const forumCommentRouter = require("./routes/ForumComments");
+app.use("/forumcomments", forumCommentRouter);
+
 //
 
 db.sequelize.sync().then(()=> {

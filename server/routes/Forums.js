@@ -3,7 +3,7 @@ const router = express.Router();
 const { Forums } = require("../models");
 
 router.get("/getForums", async (req, res) => {
-  const listOfForums = await Posts.findAll();
+  const listOfForums = await Forums.findAll();
   res.json(listOfForums);
 });
 

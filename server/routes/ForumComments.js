@@ -4,7 +4,7 @@ const { ForumComments } = require("../models");
 
 
 router.get("/:forumId", async (req, res) => {
-  const forumId = req.params.id
+  const forumId = req.params.forumId
   const forumComments = await ForumComments.findAll({ where: { ForumId: forumId }});
   res.json(forumComments);
 });
