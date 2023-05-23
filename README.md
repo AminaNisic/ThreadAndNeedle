@@ -1,9 +1,6 @@
 # ThreadAndNeedle
 
-
-We are excited to announce the initial release of Thread and Needle (Version 1.0.0).
-
-Details of this release:
+This is the current state of the Thread and Needle web app:
 
 Features:
 
