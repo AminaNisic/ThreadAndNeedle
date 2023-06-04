@@ -1,0 +1,32 @@
+<footer class="bg-dark_green w-screen z-20 border-t border-white-200 dark:border-white-600" id="footer" style="margin-top: 2.18rem;">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
+      <img src="assets/images/logo.png" class="h-26 sm:h-24 md:h-26" alt="T&N Logo">
+      <div class="border-l mx-4 border-white-200 dark:border-white-600"></div>
+      <div class="text-white">
+        <p class="mb-2 text-lg leading-7 font-medium">Thread&amp;Needle</p>
+        <p class="mb-2 text-lg leading-7 font-normal">Contact Us:</p>
+        <p class="mb-2 text-lg leading-7 font-medium">thread&amp;needle@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+  
+  
+  <script>
+    // Function to check if the page has been scrolled to the bottom
+    function isScrolledToBottom() {
+      return (window.innerHeight + window.pageYOffset) >= document.body.offsetHeight;
+    }
+  
+    // Function to handle scrolling and show/hide the footer
+    function handleScroll() {
+      if (isScrolledToBottom()) {
+        document.getElementById('footer').style.display = 'block';
+      } else {
+        document.getElementById('footer').style.display = 'none';
+      }
+    }
+  
+    // Event listener for scrolling
+    window.addEventListener('scroll', handleScroll);
+  </script>
+  
