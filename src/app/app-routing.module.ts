@@ -4,8 +4,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { FooterComponent } from './footer/footer.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
-import { LoginComponent } from './login/login.component';
-import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegistrationComponent } from './auth/registration/registration.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { BlogPostComponent } from './homepage/blog-post/blog-post.component';
+import { BlogPostScreenComponent } from './blog-post-screen/blog-post-screen.component';
+import { ForumPostComponent } from './forum/forum-post/forum-post.component';
+import { ForumComponent } from './forum/forum.component';
+
 
 const routes: Routes = [
   { path: 'navbar', component: NavbarComponent },
@@ -14,6 +20,11 @@ const routes: Routes = [
   {path: 'myProfile', component: MyProfileComponent },
   {path: 'login', component: LoginComponent },
   {path: 'registration', component: RegistrationComponent },
+  {path: 'homepage', component: HomepageComponent },
+  {path: 'blogPost', component: BlogPostComponent },
+  {path: 'blogPostScreen', component: BlogPostScreenComponent },
+  {path: 'forumPost', component: ForumPostComponent },
+  {path: 'forum', component: ForumComponent },
 ];
 
 @NgModule({

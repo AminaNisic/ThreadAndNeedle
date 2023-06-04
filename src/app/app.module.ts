@@ -7,8 +7,15 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
-import { LoginComponent } from './login/login.component';
-import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegistrationComponent } from './auth/registration/registration.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { BlogPostComponent } from './homepage/blog-post/blog-post.component';
+import { BlogPostScreenComponent } from './blog-post-screen/blog-post-screen.component';
+import { ForumComponent } from './forum/forum.component';
+import { ForumPostComponent } from './forum/forum-post/forum-post.component';
+
+
 
 
 @NgModule({
@@ -19,7 +26,13 @@ import { RegistrationComponent } from './registration/registration.component';
     FooterComponent,
     MyProfileComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    HomepageComponent,
+    BlogPostComponent,
+    BlogPostScreenComponent,
+    ForumComponent,
+    ForumPostComponent,
+   
   ],
   imports: [
     BrowserModule,
