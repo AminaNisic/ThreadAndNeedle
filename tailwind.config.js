@@ -161,11 +161,6 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
-      "dark_green" : "#032B1A",
-      "light_green" : "#237250",
-      red : "D22F2F", 
-      "light_yellow" : "#E8F0B6", 
-      "light_pink" : "#DDB390",
     }),
     columns: {
       auto: "auto",
@@ -1017,6 +1012,13 @@ module.exports = {
         'semibold': '600',
         'bold': '700',
       },
+      colors: {
+        "darkGreen" : "#032B1A",
+        "lightGreen" : "#237250",
+        "red" : "#D22F2F", 
+        "lightYellow" : "#BCCA69", 
+        "lightPink" : "#DDB390",
+      }
     },
   },
   plugins: [],
