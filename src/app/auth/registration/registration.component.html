@@ -72,6 +72,21 @@
       color: #DDB390; 
       border-bottom: 2px solid #DDB390;
     }
+
+    .registration-button {
+      width: 104px;
+      height: 34px;
+      background-color: lightGreen;
+      border-radius: 3px;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
     
   </style>
 </head>
@@ -81,7 +96,7 @@
     <div class="shape">
       <div class="logo" routerLink="/homepage"></div>
       <p class="text-white">
-        Hello, join us today by creating your account.
+        <br><br>Hello, join us today by creating your account.
       </p>
       <div class="input-container">
         <input type="text" placeholder="Username" style="color: #DDB390;">
@@ -95,7 +110,7 @@
       <div class="input-container">
         <input type="password" placeholder="Repeat Password" style="color: #DDB390;">
       </div>
-      
+      <a href="/login" class="registration-button">Sign Up</a>
         <a href="#" class="text-lg text-white hover:text-white" routerLink="/login">
           Have an account?Click here to log in.
         </a>

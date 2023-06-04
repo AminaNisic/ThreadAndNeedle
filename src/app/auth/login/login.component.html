@@ -73,6 +73,21 @@
       border-bottom: 2px solid #DDB390;
     }
     
+    .login-button {
+      width: 104px;
+      height: 34px;
+      background-color: lightGreen;
+      border-radius: 3px;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
   </style>
 </head>
 <body>
@@ -81,7 +96,7 @@
     <div class="shape">
       <div class="logo" routerLink="/homepage"></div>
       <p class="text-white">
-        Welcome back! Please login into your account.
+        <br><br>Welcome back! Please login into your account.
       </p>
       <div class="input-container">
         <input type="text" placeholder="sarah@gmail.com" style="color: #DDB390;">
@@ -89,10 +104,10 @@
       <div class="input-container">
         <input type="password" placeholder="********" style="color: #DDB390;">
       </div>
-      
-        <a href="#" class=" text-lg text-white" routerLink="/registration">
-          Don’t have an account? Click here to create one.
-        </a>
+      <a href="/homepage" class="login-button">Login</a>
+      <a href="#" class="text-lg text-white" routerLink="/registration">
+        Don’t have an account? Click here to create one.
+      </a>
       
     </div>
   </div>
