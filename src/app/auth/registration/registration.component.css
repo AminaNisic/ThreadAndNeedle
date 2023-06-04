@@ -7,7 +7,7 @@
   .shape {
     width: 33.25rem;
     height: 33.06rem;
-    background-color: lightPink;
+    background-color: #DDB390;
     border-radius: 0 30px 30px 0;
   }
 
@@ -17,5 +17,5 @@
   }
 
   .input-container input::placeholder {
-    color: lightPink;
+    color: #DDB390;
   }

@@ -14,6 +14,7 @@ import { ForumComponent } from './forum/forum.component';
 
 
 const routes: Routes = [
+  
   { path: 'navbar', component: NavbarComponent },
   {path: 'aboutUs', component: AboutUsComponent },
   {path: 'footer', component: FooterComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'blogPostScreen', component: BlogPostScreenComponent },
   {path: 'forumPost', component: ForumPostComponent },
   {path: 'forum', component: ForumComponent },
+  { path: '', redirectTo: 'homepage', pathMatch: 'full' },
 ];
 
 @NgModule({

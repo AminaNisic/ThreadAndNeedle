@@ -9,7 +9,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background-color: pink;
+      background-color: #DDB390;
     }
     
     .image {
@@ -18,18 +18,20 @@
       border-radius: 30px 0 0 30px;
       background-image: url(assets/images/registrationImg.jpg);
       background-size: cover;
+      box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.35);
     }
 
     .shape {
       width: 33.25rem;
       height: 43.06rem;
-      background-color: lightPink;
+      background-color: #DDB390;
       border-radius: 0 30px 30px 0;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       position: relative; 
+      box-shadow: 3px 2px 2px rgba(0, 0, 0, 0.35);
     }
 
     .logo {
@@ -67,8 +69,8 @@
       border: none;
       outline: none;
       border-radius: 30px;
-      color: lightPink; 
-      border-bottom: 2px solid lightPink;
+      color: #DDB390; 
+      border-bottom: 2px solid #DDB390;
     }
     
   </style>
@@ -77,28 +79,27 @@
   <div class="container">
     <div class="image"></div>
     <div class="shape">
-      <div class="logo"></div>
+      <div class="logo" routerLink="/homepage"></div>
       <p class="text-white">
         Hello, join us today by creating your account.
       </p>
       <div class="input-container">
-        <input type="text" placeholder="Username" style="color: lightPink;">
+        <input type="text" placeholder="Username" style="color: #DDB390;">
       </div>
       <div class="input-container">
-        <input type="text" placeholder="Email" style="color: lightPink;">
+        <input type="text" placeholder="Email" style="color: #DDB390;">
       </div>
       <div class="input-container">
-        <input type="password" placeholder="Password" style="color: lightPink;">
+        <input type="password" placeholder="Password" style="color: #DDB390;">
       </div>
       <div class="input-container">
-        <input type="password" placeholder="Repeat Password" style="color: lightPink;">
+        <input type="password" placeholder="Repeat Password" style="color: #DDB390;">
       </div>
-      <p class="text-white">
-        Have an account? 
-        <a href="#" class="text-lime text-lg hover:text-white active:text-limeclick">
-            Click here to log in.
+      
+        <a href="#" class="text-lg text-white hover:text-white" routerLink="/login">
+          Have an account?Click here to log in.
         </a>
-      </p>
+      
     </div>
   </div>
 </body>

@@ -14,6 +14,8 @@ import { BlogPostComponent } from './homepage/blog-post/blog-post.component';
 import { BlogPostScreenComponent } from './blog-post-screen/blog-post-screen.component';
 import { ForumComponent } from './forum/forum.component';
 import { ForumPostComponent } from './forum/forum-post/forum-post.component';
+import { BlankLayoutComponent } from './blank-layout/blank-layout.component';
+import { MainLayoutComponent } from './main-layout/main-layout.component';
 
 
 
@@ -32,6 +34,8 @@ import { ForumPostComponent } from './forum/forum-post/forum-post.component';
     BlogPostScreenComponent,
     ForumComponent,
     ForumPostComponent,
+    BlankLayoutComponent,
+    MainLayoutComponent,
    
   ],
   imports: [
