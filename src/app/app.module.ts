@@ -7,6 +7,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
     AboutUsComponent,
     NavbarComponent,
     FooterComponent,
-    MyProfileComponent
+    MyProfileComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
