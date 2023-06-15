@@ -1,73 +1,53 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0.1rem;
-      background-color: #BCCA69;
-      width:100% ;
-      height: 100%;
-    }
-    
-    .profile-container {
-      display: flex;
-      align-items: flex-start;
-      margin-top: 16.68rem;
-      margin-left: 7.93rem;
-      margin-bottom: 1.06rem;
-    }
-    
-    .profile-img {
-      max-height: 15.43rem;
-      max-width: 15.25rem;
-      height: auto;
-      width: auto;
-      margin-right: 1.06rem;
-      margin-top: 1rem;
-    }
-    
-    .profile-info {
-      margin-bottom: 1rem;
-    }
-    
-    .rectangle-container {
-      display: flex;
-      flex-direction: column;
-      margin-top: 4.43rem;
-    }
-    
-    .rectangle {
-      width: 53.85rem;
-      height: 3.31rem;
-      background-color: white;
-      display: flex;
-      align-items: center;
-      justify-content: left;
-      margin: 0;
-      box-shadow: 0 2px 2px lightPink;
-    }
-
-    
-  </style>
-</head>
-<body>
-  <div class="profile-container">
-    <div>
-      <img src="assets/images/profileImg2.jpg" alt="Profile Image" class="profile-img">
-      <h2 class="profile-info">MiaTutorials</h2>
-    </div>
-    <div class="rectangle-container">
-      <div class="rectangle">
-        <p style="margin-left: 3.12rem;">Edit Email</p>
-      </div>
-      <div class="rectangle">
-        <p style="margin-left: 3.12rem;">Edit Username</p>
-      </div>
-      <div class="rectangle">
-        <p style="margin-left: 3.12rem;">Edit Password</p>
+<section class="vh-100 d-flex justify-content-center align-items-center" style="background-color: #e2f3e7;">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col col-lg-6 mb-4 mb-lg-0">
+        <div class="card mb-3" style="border-radius: .5rem;">
+          <div class="row g-0">
+            <div class="col-md-4 gradient-custom text-center text-white"
+              style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem; border-top-right-radius: .25rem; border-bottom-right-radius: .25rem;">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava5-bg.webp"
+                alt="Avatar" class="img-fluid my-5" style="width: 120px;" />
+              <h3>MiaTutorials</h3>
+              <i class="far fa-edit mb-5"></i>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body p-4">
+                <h6 class="text-lightGreen font-semibold">Information</h6>
+                <hr class="mt-0 mb-4">
+                <div class="row pt-1">
+                  <div class="col-6 mb-3">
+                    <h6 class="text-lightGreen"><br>Email</h6>
+                    <p class="text-muted text-darkGreen font-semibold">mia_tutorials@gmail.com</p>
+                    <small><a href="#" class="text-gray-500">Edit</a></small>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <h6 class="text-lightGreen"><br>Username</h6>
+                    <p class="text-muted text-darkGreen font-semibold">MiaTutorials</p>
+                    <small><a href="#" class="text-gray-500">Edit</a></small>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <h6 class="text-lightGreen"><br>Password</h6>
+                    <p class="text-muted text-darkGreen font-bold">********</p>
+                    <small><a href="#" class="text-gray-500">Edit</a></small>
+                  </div>
+                </div>
+                <h6></h6>
+                <hr class="mt-0 mb-4">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</body>
-</html>
+</section>
+
+<style>
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+</style>
