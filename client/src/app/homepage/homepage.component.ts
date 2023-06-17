@@ -1,18 +1,15 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Ripple, initTE } from 'tw-elements';
 
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
-export class HomepageComponent {
+export class HomepageComponent implements OnInit {
 
-  constructor(private router: Router) { }
-
-  navigateToAnotherPage() {
-    this.router.navigate(['./about-us']);
+  ngOnInit() {
+    initTE({ Ripple });
   }
 
 }
-
