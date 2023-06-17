@@ -16,6 +16,7 @@ import { ForumComponent } from './forum/forum.component';
 import { ForumPostComponent } from './forum/forum-post/forum-post.component';
 import { BlankLayoutComponent } from './blank-layout/blank-layout.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { ForumPostScreenComponent } from './forum-post-screen/forum-post-screen.component';
 
 
 
@@ -36,6 +37,7 @@ import { MainLayoutComponent } from './main-layout/main-layout.component';
     ForumPostComponent,
     BlankLayoutComponent,
     MainLayoutComponent,
+    ForumPostScreenComponent,
    
   ],
   imports: [
