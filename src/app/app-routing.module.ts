@@ -11,6 +11,9 @@ import { BlogPostComponent } from './homepage/blog-post/blog-post.component';
 import { BlogPostScreenComponent } from './blog-post-screen/blog-post-screen.component';
 import { ForumPostComponent } from './forum/forum-post/forum-post.component';
 import { ForumComponent } from './forum/forum.component';
+import { SavedPostsComponent } from './saved-posts/saved-posts.component';
+import { ForumPostScreenComponent } from './forum-post-screen/forum-post-screen.component';
+import { AddPostComponent } from './add-post/add-post.component';
 
 
 const routes: Routes = [
@@ -27,6 +30,10 @@ const routes: Routes = [
   {path: 'forumPost', component: ForumPostComponent },
   {path: 'forum', component: ForumComponent },
   { path: '', redirectTo: 'homepage', pathMatch: 'full' },
+  {path: 'saved-posts', component: SavedPostsComponent},
+  {path: 'forum-post-screen', component:ForumPostScreenComponent},
+  {path: 'blog-post-screen', component:BlogPostScreenComponent},
+  {path:'add-post', component:AddPostComponent}
 ];
 
 @NgModule({
