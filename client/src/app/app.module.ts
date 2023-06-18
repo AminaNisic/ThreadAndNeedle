@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,9 @@ import { ForumComponent } from './forum/forum.component';
 import { ForumPostComponent } from './forum/forum-post/forum-post.component';
 import { BlankLayoutComponent } from './blank-layout/blank-layout.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { ForumPostScreenComponent } from './forum-post-screen/forum-post-screen.component';
+import { SavedPostsComponent } from './saved-posts/saved-posts.component';
+import { AddPostComponent } from './add-post/add-post.component';
 
 
 
@@ -36,11 +40,15 @@ import { MainLayoutComponent } from './main-layout/main-layout.component';
     ForumPostComponent,
     BlankLayoutComponent,
     MainLayoutComponent,
+    ForumPostScreenComponent,
+    SavedPostsComponent,
+    AddPostComponent,
    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
