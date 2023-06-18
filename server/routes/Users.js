@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const { Users } = require('../models')
 const bcrypt = require('bcrypt');
-
 const {sign} = require('jsonwebtoken');
+const { validateToken } = require('../middleware/AuthMiddleware')
 
 router.post("/register", async (req,res) => {
    const { username, password, email } = req.body
@@ -28,12 +28,14 @@ router.post('/login', async (req,res) => {
     bcrypt.compare(password, user.password).then((match) => {
         if (!match) res.json({ error: "Wrong username and password combination" });
         //add username or email option
-        /*const accessToken = sign({username: user.username, id: user.id}, 
-        "bljonkajenajpametnijabljnkaikona");*/
+        const accessToken = sign({username: user.username, id: user.id}, 
+        "bljonkajenajpametnijabljnkaikona");
 
 
-         return res.json("logged in!");
+        res.json(accessToken);
     })
+
+    //accesstoken for testing: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVtYXRyb24zMDAwIiwiaWQiOjIsImlhdCI6MTY4Njk4NDg4Nn0.CBCJyLW5qSDdE5j99nKxEw22oW6xbh3e41wa-W_7kmk
 })
 
 
