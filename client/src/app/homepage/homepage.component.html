@@ -7,7 +7,6 @@
       aria-label="Search"
       aria-describedby="button-addon1" />
 
-    <!--Search button-->
     <button
       class="relative z-[2] flex items-center rounded-r bg-lightYellow px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-lightPink active:shadow-lg"
       type="button"
@@ -29,7 +28,7 @@
     <button class="bg-lightGreen hover:bg-lightYellow text-white font-bold py-2 px-4 rounded ml-2">
       Add Post
     </button>
-    
+
     <style>
       .btn {
         @apply font-bold py-2 px-4 rounded;
@@ -44,54 +43,70 @@
   </div>
   <style>
     .blog-post-container {
-        margin-bottom: 30px;
+      margin-bottom: 30px;
     }
-</style>
+  </style>
 
-<div id="blogPostContainer" class="text-black mt-8 mb-8 text-center" style="display: flex; flex-direction: column;">
-  <div class="blog-post-container">
-    <a href="/blog-post-screen">
-      <app-blog-post></app-blog-post>
-    </a>
+  <div id="blogPostContainer" class="text-black mt-8 mb-8 text-center" style="display: flex; flex-direction: column;">
+    <div class="blog-post-container">
+      <a href="/blog-post-screen">
+        <app-blog-post></app-blog-post>
+      </a>
+    </div>
+    <div class="blog-post-container">
+      <a href="/blog-post-screen">
+        <app-blog-post></app-blog-post>
+      </a>
+    </div>
+    <div class="blog-post-container">
+      <a href="/blog-post-screen">
+        <app-blog-post></app-blog-post>
+      </a>
+    </div>
+    <div class="blog-post-container">
+      <a href="/blog-post-screen">
+        <app-blog-post></app-blog-post>
+      </a>
+    </div>
   </div>
-  <div class="blog-post-container">
-    <a href="/blog-post-screen">
-      <app-blog-post></app-blog-post>
-    </a>
+
+  <div class="flex justify-center">
+    <button onclick="showMoreBlogPosts()" class="bg-lightGreen hover:bg-lightYellow text-white font-bold py-2 px-4 rounded ml-2">
+      Show More
+    </button>
   </div>
-  <div class="blog-post-container">
-    <a href="/blog-post-screen">
-      <app-blog-post></app-blog-post>
-    </a>
-  </div>
-  <div class="blog-post-container">
-    <a href="/blog-post-screen">
-      <app-blog-post></app-blog-post>
-    </a>
-  </div>
-</div>
 
-
-
-<div class="flex justify-center">
-  <button onclick="showMoreBlogPosts()" class="bg-lightGreen hover:bg-lightYellow text-white font-bold py-2 px-4 rounded ml-2">
-    Show More
-  </button>
-</div>
-
-<style>
-  .btn {
-    @apply font-bold py-2 px-4 rounded;
-  }
-  .btn-blue {
-    @apply bg-blue-500 text-white;
-  }
-  .btn-blue:hover {
-    @apply bg-blue-700;
-  }
-</style>
+  <style>
+    .btn {
+      @apply font-bold py-2 px-4 rounded;
+    }
+    .btn-blue {
+      @apply bg-blue-500 text-white;
+    }
+    .btn-blue:hover {
+      @apply bg-blue-700;
+    }
+  </style>
 
 <script>
+  var BlogPostService = (function () {
+    var instance;
+
+    function BlogPostService() {
+      // Constructor implementation
+    }
+
+    BlogPostService.getInstance = function () {
+      if (!instance) {
+        instance = new BlogPostService();
+      }
+
+      return instance;
+    };
+
+    return BlogPostService;
+  })();
+
   function showMoreBlogPosts() {
     var blogPostContainer = document.getElementById("blogPostContainer");
 
@@ -102,7 +117,8 @@
       blogPostContainer.appendChild(newBlogPostContainer);
     }
   }
+
+  // Usage example:
+  var blogPostService = BlogPostService.getInstance();
 </script>
 </div>
-
-

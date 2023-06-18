@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./blog-post-screen.component.css']
 })
 export class BlogPostScreenComponent {
+  isClicked = false;
 
+  toggleBookmark() {
+    this.isClicked = !this.isClicked;
+  }
 }
