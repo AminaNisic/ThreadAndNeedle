@@ -26,45 +26,14 @@
     </button>
 
     <button class="bg-lightGreen hover:bg-lightYellow text-white font-bold py-2 px-4 rounded ml-2"
-    routerLink="/add-post">
+      routerLink="/add-post">
       Add Post
     </button>
 
-    <style>
-      .btn {
-        @apply font-bold py-2 px-4 rounded;
-      }
-      .btn-blue {
-        @apply bg-blue-500 text-white;
-      }
-      .btn-blue:hover {
-        @apply bg-blue-700;
-      }
-    </style>
   </div>
-  <style>
-    .blog-post-container {
-      margin-bottom: 30px;
-    }
-  </style>
 
-  <div id="blogPostContainer" class="text-black mt-8 mb-8 text-center" style="display: flex; flex-direction: column;">
-    <div class="blog-post-container">
-      <a href="/blog-post-screen">
-        <app-blog-post></app-blog-post>
-      </a>
-    </div>
-    <div class="blog-post-container">
-      <a href="/blog-post-screen">
-        <app-blog-post></app-blog-post>
-      </a>
-    </div>
-    <div class="blog-post-container">
-      <a href="/blog-post-screen">
-        <app-blog-post></app-blog-post>
-      </a>
-    </div>
-    <div class="blog-post-container">
+  <div id="blogPostContainer" class="text-black mt-8 mb-8 text-center">
+    <div class="blog-post-container" style="margin-bottom: 20px;" *ngFor="let post of blogPosts">
       <a href="/blog-post-screen">
         <app-blog-post></app-blog-post>
       </a>
@@ -72,54 +41,8 @@
   </div>
 
   <div class="flex justify-center">
-    <button onclick="showMoreBlogPosts()" class="bg-lightGreen hover:bg-lightYellow text-white font-bold py-2 px-4 rounded ml-2">
+    <button (click)="showMoreBlogPosts()" class="bg-lightGreen hover:bg-lightYellow text-white font-bold py-2 px-4 rounded ml-2">
       Show More
     </button>
   </div>
-
-  <style>
-    .btn {
-      @apply font-bold py-2 px-4 rounded;
-    }
-    .btn-blue {
-      @apply bg-blue-500 text-white;
-    }
-    .btn-blue:hover {
-      @apply bg-blue-700;
-    }
-  </style>
-
-<script>
-  var BlogPostService = (function () {
-    var instance;
-
-    function BlogPostService() {
-      // Constructor implementation
-    }
-
-    BlogPostService.getInstance = function () {
-      if (!instance) {
-        instance = new BlogPostService();
-      }
-
-      return instance;
-    };
-
-    return BlogPostService;
-  })();
-
-  function showMoreBlogPosts() {
-    var blogPostContainer = document.getElementById("blogPostContainer");
-
-    for (var i = 0; i < 4; i++) {
-      var newBlogPostContainer = document.createElement("div");
-      newBlogPostContainer.classList.add("blog-post-container");
-      newBlogPostContainer.innerHTML = '<app-blog-post></app-blog-post>';
-      blogPostContainer.appendChild(newBlogPostContainer);
-    }
-  }
-
-  // Usage example:
-  var blogPostService = BlogPostService.getInstance();
-</script>
 </div>
