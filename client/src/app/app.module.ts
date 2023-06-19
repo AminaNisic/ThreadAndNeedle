@@ -21,6 +21,7 @@ import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { ForumPostScreenComponent } from './forum-post-screen/forum-post-screen.component';
 import { SavedPostsComponent } from './saved-posts/saved-posts.component';
 import { AddPostComponent } from './add-post/add-post.component';
+import { AddForumPostComponent } from './add-forum-post/add-forum-post.component';
 
 
 
@@ -44,6 +45,7 @@ import { AddPostComponent } from './add-post/add-post.component';
     ForumPostScreenComponent,
     SavedPostsComponent,
     AddPostComponent,
+    AddForumPostComponent,
    
   ],
   imports: [
