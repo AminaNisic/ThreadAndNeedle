@@ -55,7 +55,7 @@ export class RegistrationComponent {
     }
 
     // Send a POST request to the server with the user data
-    this.http.post('http://localhost:3001/auth/register', this.userData).subscribe(
+    this.http.post('https://thread-and-needle-543768a8777c.herokuapp.com/auth/register', this.userData).subscribe(
       (response: any) => {
         // Registration successful, handle the response
         alert('Registration successful');

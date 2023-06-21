@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
+/////for eventual implementation of login information relating to forum posts and comments
 @Injectable({
   providedIn: 'root'
 })
-export class BlogPostRepository {
-  private readonly baseUrl = 'https://thread-and-needle-543768a8777c.herokuapp.com/posts';
+export class ForumPostRepository {
+  private readonly baseUrl = 'https://thread-and-needle-543768a8777c.herokuapp.com/forums/getForums';
 
   constructor(private http: HttpClient) {}
 

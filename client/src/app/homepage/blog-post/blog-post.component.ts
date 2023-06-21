@@ -10,6 +10,7 @@ interface Observer {
   templateUrl: './blog-post.component.html',
   styleUrls: ['./blog-post.component.css']
 })
+
 export class BlogPostComponent implements OnInit, Observer {
   posts: any[] = [];
   isDataFetched: boolean = false;
@@ -26,7 +27,7 @@ export class BlogPostComponent implements OnInit, Observer {
   }
 
   fetchPosts() {
-    this.http.get<any[]>('http://localhost:3001/posts').subscribe((response: any[]) => {
+    this.http.get<any[]>('https://thread-and-needle-543768a8777c.herokuapp.com/posts').subscribe((response: any[]) => {
       this.posts = response.map(post => ({
         ...post,
         image: this.getRandomImageURL()
@@ -63,7 +64,7 @@ export class BlogPostComponent implements OnInit, Observer {
 
     // Make the HTTP PUT request to update the post
     this.http
-      .put<any>(`http://localhost:3001/posts/editPost/${postId}`, this.editPostData, { headers })
+      .put<any>(`https://thread-and-needle-543768a8777c.herokuapp.com/posts/editPost/${postId}`, this.editPostData, { headers })
       .subscribe(
         (response) => {
           // Post updated successfully, handle the response as needed
@@ -94,7 +95,7 @@ export class BlogPostComponent implements OnInit, Observer {
 
     // Make the HTTP DELETE request to delete the post
     this.http
-      .delete(`http://localhost:3001/posts/deletePost/${postId}`, { headers })
+      .delete(`https://thread-and-needle-543768a8777c.herokuapp.com/posts/deletePost/${postId}`, { headers })
       .subscribe(
         () => {
           // Post deleted successfully, handle the response as needed

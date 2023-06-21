@@ -53,7 +53,7 @@ export class AddPostComponent {
     };
 
     // Perform API call to create post endpoint
-    this.http.post('http://localhost:3001/posts/createPost', postData, { headers }).subscribe(
+    this.http.post('https://thread-and-needle-543768a8777c.herokuapp.com/posts/createPost', postData, { headers }).subscribe(
       (response) => {
         // Post creation successful
         alert('Post added successfully:');

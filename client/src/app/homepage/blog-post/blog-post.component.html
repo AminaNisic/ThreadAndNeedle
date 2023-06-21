@@ -7,13 +7,13 @@
         </div>
         <div class="p-8">
           <div class="uppercase tracking-wide text-sm text-darkGreen text-left font-semibold">{{ post.title }}</div>
-          <p class="text-darkGreen text-left">By {{ post.username }}</p>
+          <p class="text-darkGreen text-left">By: {{ post.username }}</p>
           <p class="mt-2 text-lightGreen text-left">
             {{ post.description }}
           </p>
           <!-- Edit Button -->
           <button class="btn btn-blue mt-4 custom-shadow" (click)="openEditForm(post)"
-            style="border-radius: 5px; padding: 10px 20px; background-color: blue; color: white; font-size: 16px; border: none;">
+            style="border-radius: 5px; padding: 10px 20px; background-color: darkGreen; color: white; font-size: 16px; border: none;">
             Edit
           </button>
           <!-- Delete Button -->

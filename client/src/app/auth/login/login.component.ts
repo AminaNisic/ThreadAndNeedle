@@ -26,7 +26,7 @@ export class LoginComponent {
 
       // Perform API call to login endpoint
       const loginData = { email: this.email, password: this.password };
-      this.http.post('http://localhost:3001/auth/login', loginData).subscribe(
+      this.http.post('https://thread-and-needle-543768a8777c.herokuapp.com/auth/login', loginData).subscribe(
         (response: any) => {
           // Login successful
           console.log('Login successful:', response);

@@ -1,6 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const { Forums } = require("../models");
+const { validateToken } = require("../middleware/AuthMiddleware");
+
+//get request with nicer formating hehe
 
 router.get("/getForums", async (req, res) => {
   const listOfForums = await Forums.findAll();
