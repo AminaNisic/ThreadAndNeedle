@@ -3,6 +3,50 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 </style>
+<!-- Edit Post Modal -->
+<ng-template #editPostModal let-modal>
+  <div class="fixed inset-0 flex items-center justify-center z-50">
+    <div class="modal-dialog max-w-xl mx-auto">
+      <div class="modal-content bg-white rounded-lg shadow-lg">
+        <div class="modal-header border-b border-gray-300 bg-gray-100 p-4">
+          <h4 class="modal-title text-lg font-semibold">Edit Post</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body p-4">
+          <!-- Add form fields to edit the post data -->
+          <form (ngSubmit)="submitEditPostForm()" #editPostForm="ngForm">
+            <div class="form-group">
+              <label for="title" class="block font-semibold">Title</label>
+              <hr />
+              <input type="text" class="form-input mt-1" id="title" name="title" [(ngModel)]="editPostData.title"
+                required>
+            </div>
+            <div class="form-group">
+              <label for="description" class="block font-semibold">Description</label>
+              <hr />
+              <textarea class="form-textarea mt-1" id="description" name="description"
+                [(ngModel)]="editPostData.description" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="blogText" class="block font-semibold">Blog Text</label>
+              <hr />
+              <textarea class="form-textarea mt-1" id="blogText" name="blogText" [(ngModel)]="editPostData.blogText"
+                required></textarea>
+            </div>
+            <div class="flex justify-end">
+              <hr />
+              <button type="submit" class="btn btn-primary custom-shadow"
+                style="border-radius: 5px; padding: 10px 20px; background-color: #4CAF50; color: white; font-size: 16px; border: none;">Save
+                Changes</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
 
 <div>
   <a *ngFor="let post of posts" [routerLink]="'/blog-post-screen/' + post.id">
@@ -14,10 +58,20 @@
         </div>
         <div class="p-8">
           <div class="uppercase tracking-wide text-sm text-darkGreen text-left font-semibold">{{ post.title }}</div>
-          <p class="text-darkGreen text-left">By {{ post.author }}</p>
+          <p class="text-darkGreen text-left">By {{ post.username }}</p>
           <p class="mt-2 text-lightGreen text-left">
             {{ post.description }}
           </p>
+          <!-- Edit Button -->
+          <button class="btn btn-blue mt-4 custom-shadow" (click)="openEditModal(post)"
+            style="border-radius: 5px; padding: 10px 20px; background-color: blue; color: white; font-size: 16px; border: none;">
+            Edit
+          </button>
+          <!-- Delete Button -->
+          <button class="btn btn-red mt-4 custom-shadow" (click)="deletePost(post.id)"
+            style="border-radius: 5px; padding: 10px 20px; background-color: red; color: white; font-size: 16px; border: none;">
+            Delete
+          </button>
         </div>
       </div>
     </div>

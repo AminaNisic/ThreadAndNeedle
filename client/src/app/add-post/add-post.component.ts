@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-post',
@@ -14,7 +15,7 @@ export class AddPostComponent {
   blogTextColor: string = '';
   descriptionColor: string = '';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   changeTextColor(fieldName: string) {
     switch (fieldName) {
@@ -36,7 +37,7 @@ export class AddPostComponent {
   
     // Check if the user is logged in
     if (!accessToken) {
-      console.error('User not logged in');
+      alert('User not logged in');
       // Handle the error or redirect to the login page
       return;
     }
@@ -55,7 +56,8 @@ export class AddPostComponent {
     this.http.post('http://localhost:3001/posts/createPost', postData, { headers }).subscribe(
       (response) => {
         // Post creation successful
-        console.log('Post added successfully:', response);
+        alert('Post added successfully:');
+        this.router.navigate(['/homepage']);
 
         // Reset form fields
         this.title = '';

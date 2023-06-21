@@ -20,8 +20,60 @@ router.post("/createPost", validateToken, async (req, res) => {
   const username = req.user.username;
 
   try {
-    const createdPost = await Posts.create({ ...post, UserId: userId, username });
+    const createdPost = await Posts.create({ ...post, user_id: userId, username });
     res.json(createdPost);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+router.put("/editPost/:id", validateToken, async (req, res) => {
+  const postId = req.params.id;
+  const { title, description, blogText } = req.body;
+  const userId = req.user.id;
+
+  try {
+    const post = await Posts.findByPk(postId);
+
+    if (!post) {
+      return res.status(404).json({ error: "Post not found" });
+    }
+
+    if (post.user_id !== userId) {
+      return res.status(403).json({ error: "You are not authorized to edit this post. Please refer to your created Post to Edit it." });
+    }
+
+    // Update the post with the new values
+    post.title = title;
+    post.description = description;
+    post.blogText = blogText;
+
+    await post.save();
+
+    res.json(post);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+router.delete("/deletePost/:id", validateToken, async (req, res) => {
+  const postId = req.params.id;
+  const userId = req.user.id;
+
+  try {
+    const post = await Posts.findByPk(postId);
+
+    if (!post) {
+      return res.status(404).json({ error: "Post not found" });
+    }
+
+    if (post.user_id !== userId) {
+      return res.status(403).json({ error: "You are not authorized to delete this post. Please refer to your created Post to delete it." });
+    }
+
+    await post.destroy();
+
+    res.json({ message: "Post deleted successfully" });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

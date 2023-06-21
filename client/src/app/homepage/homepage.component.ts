@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent {
-  blogPosts: number[] = [1, 2, 3, 4]; // Initial blog posts
+  blogPosts: number[] = [1]; // Initial blog posts
   hasMorePosts: boolean = true;
   isFetchingPosts: boolean = false;
 
@@ -20,7 +20,7 @@ export class HomepageComponent {
     // Simulating an asynchronous HTTP request
     setTimeout(() => {
       const newPosts = [];
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 1; i++) {
         newPosts.push(this.blogPosts.length + i + 1);
       }
       this.blogPosts = this.blogPosts.concat(newPosts);
