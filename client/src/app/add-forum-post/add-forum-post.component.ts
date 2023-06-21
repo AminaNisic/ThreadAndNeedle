@@ -52,7 +52,7 @@ export class AddForumPostComponent {
       (response) => {
         // Post creation successful
         alert('Post added successfully:');
-        this.router.navigate(['/homepage']);
+        this.router.navigate(['/forum']);
 
         // Reset form fields
         this.title = '';
