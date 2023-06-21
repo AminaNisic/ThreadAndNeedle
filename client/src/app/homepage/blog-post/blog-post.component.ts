@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap'; // Import NgbModal
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 interface Observer {
   update(): void;
@@ -19,7 +19,7 @@ export class BlogPostComponent implements OnInit, Observer {
   @ViewChild('editPostModal') editPostModal: any;
   editPostData: any = {};
 
-  constructor(private http: HttpClient, private modalService: NgbModal) { } // Inject NgbModal
+  constructor(private http: HttpClient, @Inject(NgbModal) private modalService: NgbModal) { }
 
   ngOnInit() {
     if (!this.isDataFetched) {
