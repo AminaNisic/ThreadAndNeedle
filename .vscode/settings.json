@@ -1,0 +1,18 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Users/ademirahmetovic/Downloads/jar_files/ant-1.7.0.jar",
+        "/Users/ademirahmetovic/Downloads/jar_files/ant-launcher-1.7.0.jar",
+        "/Users/ademirahmetovic/Downloads/jar_files/bsh-2.0b4.jar",
+        "/Users/ademirahmetovic/Downloads/jar_files/hamcrest-core-1.1.jar",
+        "/Users/ademirahmetovic/Downloads/jar_files/jcommander-1.48.jar",
+        "/Users/ademirahmetovic/Downloads/jar_files/junit-4.10.jar",
+        "/Users/ademirahmetovic/Downloads/jar_files/snakeyaml-1.15.jar",
+        "/Users/ademirahmetovic/Downloads/jar_files/testng-6.9.9.jar",
+        "/Users/ademirahmetovic/Downloads/jar_files (1)/apiguardian-api-1.1.2.jar",
+        "/Users/ademirahmetovic/Downloads/jar_files (1)/junit-jupiter-api-5.10.0-M1.jar",
+        "/Users/ademirahmetovic/Downloads/jar_files (1)/junit-platform-commons-1.10.0-M1.jar",
+        "/Users/ademirahmetovic/Downloads/jar_files (1)/opentest4j-1.2.0.jar",
+        "/Users/ademirahmetovic/Downloads/selenium-server-4.10.0 (1).jar"
+    ]
+}

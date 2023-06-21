@@ -3,6 +3,20 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "TestCases",
+      "request": "launch",
+      "mainClass": "TestCases",
+      "projectName": "ThreadAndNeedle_c6306546"
+    },
+    {
+      "type": "java",
+      "name": "TestBase",
+      "request": "launch",
+      "mainClass": "TestBase",
+      "projectName": "ThreadAndNeedle_c6306546"
+    },
+    {
       "name": "ng serve",
       "type": "chrome",
       "request": "launch",

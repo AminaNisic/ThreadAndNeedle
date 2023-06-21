@@ -83,7 +83,7 @@ export class BlogPostComponent implements OnInit, Observer {
       .subscribe(
         (response) => {
           // Post updated successfully, handle the response as needed
-          console.log('Post updated:', response);
+          alert('Post updated');
           this.modalService.dismissAll('save'); // Close the modal
           this.fetchPosts(); // Fetch posts after successful update
         },
