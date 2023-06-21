@@ -7,10 +7,25 @@ import { Component } from '@angular/core';
 })
 export class HomepageComponent {
   blogPosts: number[] = [1, 2, 3, 4]; // Initial blog posts
+  hasMorePosts: boolean = true;
+  isFetchingPosts: boolean = false;
 
   showMoreBlogPosts() {
-    for (let i = 0; i < 4; i++) {
-      this.blogPosts.push(i + 5); // Add new blog post
+    if (this.isFetchingPosts) {
+      return;
     }
+
+    this.isFetchingPosts = true;
+
+    // Simulating an asynchronous HTTP request
+    setTimeout(() => {
+      const newPosts = [];
+      for (let i = 0; i < 4; i++) {
+        newPosts.push(this.blogPosts.length + i + 1);
+      }
+      this.blogPosts = this.blogPosts.concat(newPosts);
+      this.hasMorePosts = false;
+      this.isFetchingPosts = false;
+    }, 1000);
   }
 }

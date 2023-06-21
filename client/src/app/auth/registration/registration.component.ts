@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-
-//import axios from 'axios';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -8,24 +8,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent {
-//register function 
-userData: any = {
+  userData: any = {
     username: '',
     password: '',
     email: ''
-};
+  };
 
-registerUser(userData: any): void {
-  /*axios.post('http://localhost:3001/auth', userData)
-    .then((response) => {
-      console.log('Inserted.');
-      // Handle the response as needed
-    })
-    .catch((error) => {
-      console.error(error);
-      // Handle the error as needed
-    });*/
-}
- 
+  constructor(private http: HttpClient, private router: Router) { }
 
+  register() {
+    // Send a POST request to the server with the user data
+    this.http.post('http://localhost:3001/auth/register', this.userData).subscribe(
+      (response: any) => {
+        // Registration successful, handle the response
+        alert('Registration successful');
+        this.router.navigate(['/login']);
+      },
+      (error) => {
+        // Registration failed, handle the error
+        console.error('Registration failed', error);
+      }
+    );
+  }
 }

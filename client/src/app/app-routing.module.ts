@@ -16,10 +16,9 @@ import { ForumPostScreenComponent } from './forum-post-screen/forum-post-screen.
 import { AddPostComponent } from './add-post/add-post.component';
 import { AddForumPostComponent } from './add-forum-post/add-forum-post.component';
 
-
 const routes: Routes = [
   
-  { path: 'navbar', component: NavbarComponent },
+  {path: 'navbar', component: NavbarComponent },
   {path: 'aboutUs', component: AboutUsComponent },
   {path: 'footer', component: FooterComponent },
   {path: 'myProfile', component: MyProfileComponent },
@@ -30,7 +29,7 @@ const routes: Routes = [
   {path: 'blogPostScreen', component: BlogPostScreenComponent },
   {path: 'forumPost', component: ForumPostComponent },
   {path: 'forum', component: ForumComponent },
-  { path: '', redirectTo: 'homepage', pathMatch: 'full' },
+  {path: '', redirectTo: 'homepage', pathMatch: 'full' },
   {path: 'saved-posts', component: SavedPostsComponent},
   {path: 'forum-post-screen', component:ForumPostScreenComponent},
   {path: 'blog-post-screen', component:BlogPostScreenComponent},
