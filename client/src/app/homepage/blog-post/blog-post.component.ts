@@ -1,6 +1,5 @@
-import { Component, OnInit, ViewChild, Inject } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 interface Observer {
   update(): void;
@@ -16,10 +15,9 @@ export class BlogPostComponent implements OnInit, Observer {
   isDataFetched: boolean = false;
   observers: Observer[] = []; // List of observers
 
-  @ViewChild('editPostModal') editPostModal: any;
   editPostData: any = {};
 
-  constructor(private http: HttpClient, @Inject(NgbModal) private modalService: NgbModal) { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
     if (!this.isDataFetched) {
@@ -43,22 +41,8 @@ export class BlogPostComponent implements OnInit, Observer {
     return `https://picsum.photos/500/300?random=${randomNum}`;
   }
 
-  openEditModal(post: any) {
+  openEditForm(post: any) {
     this.editPostData = { ...post };
-    this.modalService.open(this.editPostModal, { ariaLabelledBy: 'modal-basic-title' }).result.then(
-      (result : any) => {
-        if (result === 'save') {
-          this.submitEditPostForm();
-        } else {
-          // Modal dismissed, reset the editPostData
-          this.editPostData = {};
-        }
-      },
-      (reason: any) => {
-        // Modal dismissed, reset the editPostData
-        this.editPostData = {};
-      }
-    );
   }
 
   submitEditPostForm() {
@@ -84,7 +68,7 @@ export class BlogPostComponent implements OnInit, Observer {
         (response) => {
           // Post updated successfully, handle the response as needed
           alert('Post updated');
-          this.modalService.dismissAll('save'); // Close the modal
+          this.editPostData = {}; // Reset the editPostData
           this.fetchPosts(); // Fetch posts after successful update
         },
         (error) => {
@@ -144,7 +128,6 @@ export class BlogPostComponent implements OnInit, Observer {
 
   update() {
     // This method is called when the subject notifies observers
-    // Perform any necessary actions or updates here
     alert('Post updated');
   }
 }
