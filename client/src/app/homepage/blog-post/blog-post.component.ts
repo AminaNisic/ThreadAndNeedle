@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap'; // Import NgbModal
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap'; // Import NgbModal
 
 interface Observer {
   update(): void;
@@ -46,7 +46,7 @@ export class BlogPostComponent implements OnInit, Observer {
   openEditModal(post: any) {
     this.editPostData = { ...post };
     this.modalService.open(this.editPostModal, { ariaLabelledBy: 'modal-basic-title' }).result.then(
-      (result) => {
+      (result : any) => {
         if (result === 'save') {
           this.submitEditPostForm();
         } else {
@@ -54,7 +54,7 @@ export class BlogPostComponent implements OnInit, Observer {
           this.editPostData = {};
         }
       },
-      (reason) => {
+      (reason: any) => {
         // Modal dismissed, reset the editPostData
         this.editPostData = {};
       }
