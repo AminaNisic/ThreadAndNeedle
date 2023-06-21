@@ -23,9 +23,6 @@ import { SavedPostsComponent } from './saved-posts/saved-posts.component';
 import { AddPostComponent } from './add-post/add-post.component';
 import { AddForumPostComponent } from './add-forum-post/add-forum-post.component';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
