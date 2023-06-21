@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
-    "database": "thread-and-needle",
+    "password": "ademir299",
+    "database": "threadAndNeedle",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
@@ -20,5 +20,4 @@
     "host": "us-cdbr-east-06.cleardb.net",
     "dialect": "mysql"
   }
-
 }

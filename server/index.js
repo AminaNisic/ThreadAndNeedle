@@ -25,7 +25,6 @@ app.use("/postcomments", postCommentRouter);
 const forumCommentRouter = require("./routes/ForumComments");
 app.use("/forumcomments", forumCommentRouter);
 
-//
 //.listen(process.env.PORT || 5000)
 //const port = process.env.PORT || 3000;
 db.sequelize.sync().then(()=> {
